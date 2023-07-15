@@ -1,5 +1,6 @@
 #pragma once
-#include <assert.h>
+#include <string>
+#include <cassert>
 #include "Singleton.h"
 
 template <class T>

@@ -1,4 +1,4 @@
-#include <assert.h>
+#include <cassert>
 #include "Sprite.h"
 #include "SpriteSheet.h"
 #include "Timer.h"

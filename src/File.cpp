@@ -1,6 +1,4 @@
-#pragma once
-
-#include <assert.h>
+#include <cassert>
 #include "File.h"
 #include "ReportError.h"
 

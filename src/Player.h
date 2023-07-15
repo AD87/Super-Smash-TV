@@ -1,6 +1,6 @@
 #pragma once
 #include <iostream>
-#include <assert.h>
+#include <cassert>
 #include "Sprite.h"
 #include "EventListener.h"
 #include "SpriteSheet.h"

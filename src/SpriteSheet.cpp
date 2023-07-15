@@ -1,7 +1,7 @@
 #include "SpriteSheet.h"
 #include "Screen.h"
-#include <SDL_Image.h>
-#include <assert.h>
+#include <SDL_image.h>
+#include <cassert>
 
 SpriteSheet::SpriteSheet(){
 	m_numCellsX = 0;
