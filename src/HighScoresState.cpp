@@ -35,7 +35,8 @@ void HighScoresState::update(){
 void HighScoresState::draw(){
 	if (m_drawOnce == true) return;
 	m_bg.draw(Vec2f(0, 0));
-	m_font.draw(465, 560, std::to_string(ThePlayState::Instance()->getScore()), SDL_Color{ 220, 130, 5, 0 });
+	SDL_Color colour = { 220, 130, 5, 0 };
+	m_font.draw(465, 560, std::to_string(ThePlayState::Instance()->getScore()), colour);
 	printScores();
 	m_drawOnce = true;
 }
@@ -69,8 +70,9 @@ void HighScoresState::printScores(){
 		lastElement = 10;
 	}
 	int yPos = 25;
+	SDL_Color colour = { 0, 0, 255, 0 };
 	for (int i = 0; i < lastElement; i++){
-		m_font.draw(350, yPos, std::to_string(m_scores[i]), SDL_Color{ 0, 0, 255, 0 });
+		m_font.draw(350, yPos, std::to_string(m_scores[i]), colour);
 		yPos += 38;// start with the 1st and move down
 	}
 }

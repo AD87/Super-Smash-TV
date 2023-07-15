@@ -1,7 +1,7 @@
 #include "Image.h"
 #include "Screen.h"
-#include <SDL_Image.h>
-#include <assert.h>
+#include <SDL_image.h>
+#include <cassert>
 
 Image::Image(){
 	m_sdlTexture = nullptr;

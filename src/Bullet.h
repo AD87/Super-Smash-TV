@@ -5,7 +5,7 @@
 
 class Bullet : public GameObject{
 public:
-	virtual ~Bullet() = 0 {}
+	virtual ~Bullet() {}
 	void setPos(const Vec2f& pos);
 	void setVel(const Vec2f& vel);
 protected:

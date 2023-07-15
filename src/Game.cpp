@@ -1,4 +1,4 @@
-#include <assert.h>
+#include <cassert>
 #include "Game.h"
 #include "Timer.h"
 #include "EventPoller.h"

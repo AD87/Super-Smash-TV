@@ -1,6 +1,4 @@
 #include <math.h>
-#include <windows.h>
-#include <Lmcons.h>
 #include "PlayState.h"
 #include "EventPoller.h"
 #include "Screen.h"
@@ -48,15 +46,17 @@ bool PlayState::load(){
 
 void PlayState::draw() {
 	m_bg.draw(Vec2f(0, 0));
-	m_font.draw(80, 115, std::to_string(m_score), SDL_Color{ 0, 0, 255, 0 });
-	m_font.draw(67, 63, std::to_string(m_lives), SDL_Color{ 0, 0, 255, 0 });
+	SDL_Color colour = { 0, 0, 255, 0 };
+	m_font.draw(80, 115, std::to_string(m_score), colour );
+	m_font.draw(67, 63, std::to_string(m_lives), colour );
 	if (!m_isLoading && ThePlayer::Instance()->getIsAlive()){
 		TheGame::Instance()->drawGameObject();
 	}
 	else if (!ThePlayer::Instance()->getIsAlive()){
-		m_font.draw(375, 330, "GAME OVER", SDL_Color{ 255, 0, 255, 0 });
-		m_font.draw(180, 400, "Press Return to see the scores", SDL_Color{ 255, 0, 255, 0 });
-		m_font.draw(300, 440, "Press Escape to quit", SDL_Color{ 255, 0, 255, 0 });
+		SDL_Color colour = { 255, 0, 255, 0 };
+		m_font.draw(375, 330, "GAME OVER", colour);
+		m_font.draw(180, 400, "Press Return to see the scores", colour);
+		m_font.draw(300, 440, "Press Escape to quit", colour);
 	}
 }
 

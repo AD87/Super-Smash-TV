@@ -4,7 +4,7 @@
 
 class PowerUp : public GameObject{
 public:
-	virtual ~PowerUp() = 0 {}
+	virtual ~PowerUp() {}
 	void setPos(const Vec2f& pos);
 	virtual void draw() override;
 	virtual void update() override;

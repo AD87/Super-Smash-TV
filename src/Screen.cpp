@@ -1,5 +1,5 @@
 #include "Screen.h"
-#include <assert.h>
+#include <cassert>
 
 Screen::Screen(){
 	m_renderer = nullptr;
